@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="reboot_title">రీబూట్</string>
+    <string name="reboot_confirm">మీ ఫోన్ రీబూట్ అవుతుంది.</string>
+    <string name="global_action_reboot">రీబూట్</string>
+    <string name="tethered_notification_no_device_message">కనెక్ట్ చేయబడ్డ పరికరాలు ఏవీ లేవు</string>
+    <string name="tethered_notification_one_device_message">%1$s కనెక్ట్ చేయబడ్డ పరికరం</string>
+    <string name="tethered_notification_multi_device_message">%1$s కనెక్ట్ చేయబడ్డ పరికరాలు</string>
+    <string name="adb_net_active_notification_title">నెట్‌వర్క్‌పై ADB ప్రారంభించబడింది</string>
+    <string name="adb_both_active_notification_title">USBపై ADB &amp; నెట్‌వర్క్ ప్రారంభించబడింది</string>
+    <string name="adb_active_generic_notification_message">డీబగ్గింగ్ డిసేబుల్ చేయడానికి తాకండి.</string>
+    <string name="permlab_setKeyguardWallpaper">లాక్‌స్క్రీన్ వాల్‌పేపర్ సెట్ చేస్తుంది</string>
+    <string name="permdesc_setKeyguardWallpaper">లాక్‌‌స్క్రీన్ వాల్‌పేపర్ మార్చడానికి యాప్‌ని అనుమతిస్తుంది.</string>
+    <string name="permlab_switchMaterialTheme">మెటీరియల్ థీమ్‌ల మార్పిడి</string>
+    <string name="permdesc_switchMaterialTheme">రెండు మెటీరియల్ థీమ్స్‌ల మధ్య యాప్ మారడానికి అనుమతిస్తుంది</string>
+    <string name="color_picker_default">డిఫాల్ట్</string>
+    <string name="color_picker_message_default">మీరు ఎంచుకున్న రంగును ఎంచుకోండి.</string>
+    <string name="color_picker_gray_label">బూడిదరంగు</string>
+    <string name="color_picker_pink_label">గులాబి రంగు</string>
+    <string name="color_picker_yellow_label">పసుపు</string>
+    <string name="color_picker_green_label">ఆకుపచ్చ</string>
+    <string name="color_picker_red_label">ఎరుపు</string>
+    <string name="color_picker_purple_label">ఊదారంగు</string>
+    <string name="color_picker_orange_label">ఆరెంజ్</string>
+    <string name="color_picker_blue_label">నీలం</string>
+    <string name="color_picker_unknown_label">తెలియని</string>
+    <string name="reboot_progress">రీబూటింగ్ చేస్తోంది…</string>
+    <string name="reboot">రీబూట్</string>
+    <string name="reboot_recovery">రికవరీ</string>
+    <string name="reboot_bootloader">బూట్‌లోడర్</string>
+    <string name="global_action_screenshot">స్క్రీన్‌షాట్</string>
+    <string name="lock_to_app_toast_hardware">ఈ స్క్రీన్ అన్‌పిన్ చేయడానికి, నొక్కండి మరియు వెనక్కి పట్టుకోండి.</string>
+    <string name="lock_to_app_description_hardware">"స్క్రీన్ పిన్నింగ్ ఏక వీక్షణలో డిస్‌ప్లేని లాక్ చేస్తుంది. 
+
+ అన్‌పిన్ చేయడానికి, నొక్కండి మరియు వెనక్కి పట్టుకోండి."</string>
+    <string name="permlab_modifyWavesSettings">ఆడియో టర్నర్ సెట్టింగ్‌లు మార్చండి</string>
+    <string name="permdesc_modifyWavesSettings">ఆడియో టర్నర్ సెట్టింగ్‌లు మార్పు చేయడానికి అనువర్తనాన్ని అనుమతిస్తుంది.</string>
+    <string name="oxygen_system_label">oxygen</string>
+    <string name="BIND_OEMEX_SERVICE">bind_oemex_string</string>
+    <string name="kg_fingerprint_verification_failed">దయచేసి మళ్లీ ప్రయత్నించండి</string>
+    <string name="color_picker_champagne_label">షాంపైన్</string>
+    <string name="color_picker_pear_label">పీర్</string>
+    <string name="color_picker_turquoise_label">ఫిరోజారాయి</string>
+    <string name="color_picker_flamingo_label">ఫ్లెమింగో</string>
+    <string name="ext_media_ready_notification_title">SD కార్డ్ లభ్యత</string>
+    <string name="high_definition_tag">%s</string>
+    <string name="op_applying">అప్లై చేస్తోంది...</string>
+    <string name="install_fail_oplib_not_satisfied">ఇన్‌స్టాల్ చేయడంలో విఫలమైంది, OnePlus SDK ఆవశ్యకతలు సంతృప్తి పరచబడలేదు.</string>
+    <string name="power_intensive_notificaton_string">నేపథ్యంలో రన్ అవుతున్న ఒక అప్లికేషన్ చాలా ఎక్కువ పవర్ వినియోగిస్తోంది, వీక్షించడం కొరకు ఇక్కడ క్లిక్ చేయండి.</string>
+    <string name="zzz_op_global_action_confirm_poweroff">పవర్ ఆఫ్ చేయడానికి తాకండి</string>
+    <string name="zzz_op_global_action_confirm_reboot">రీబూట్ చేయడానికి తాకండి</string>
+</resources>
