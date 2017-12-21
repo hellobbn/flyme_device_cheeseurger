@@ -319,18 +319,21 @@
     .line 1167
     :cond_4
     iget-object v8, p0, Landroid/app/LoadedApk$ReceiverDispatcher$Args;->this$1:Landroid/app/LoadedApk$ReceiverDispatcher;
+    invoke-static {v2, v8}, Landroid/app/LoadedApk$FlymeInjector;->isFlymeRejectReceive(Landroid/content/Intent;Landroid/app/LoadedApk$ReceiverDispatcher;)Z
+
+    move-result v8
+
+    if-nez v8, :cond_flyme_0
 
     iget-object v8, v8, Landroid/app/LoadedApk$ReceiverDispatcher;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5, v8, v2}, Landroid/content/BroadcastReceiver;->onReceive(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 1168
     sget-boolean v8, Landroid/app/ActivityThread;->DEBUG_ONEPLUS:Z
 
     if-eqz v8, :cond_5
 
-    .line 1169
-    const-string/jumbo v8, "LoadedApk"
+    const-string v8, "LoadedApk"
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -392,6 +395,7 @@
     .end local v0    # "cl":Ljava/lang/ClassLoader;
     .end local v6    # "startTime":J
     :cond_5
+    :cond_flyme_0
     invoke-virtual {v5}, Landroid/content/BroadcastReceiver;->getPendingResult()Landroid/content/BroadcastReceiver$PendingResult;
 
     move-result-object v8

@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroid/app/LoadedApk$FlymeInjector;,
         Landroid/app/LoadedApk$ReceiverDispatcher;,
         Landroid/app/LoadedApk$ServiceDispatcher;,
         Landroid/app/LoadedApk$WarningContextClassLoader;
@@ -3550,15 +3551,14 @@
 
     invoke-virtual {v12, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 840
     move-object/from16 v0, p0
 
     iput-object v3, v0, Landroid/app/LoadedApk;->mApplication:Landroid/app/Application;
 
-    .line 842
+    invoke-static {}, Landroid/app/LoadedApk$FlymeInjector;->cleanFlymeTypeface()V
+
     if-eqz p2, :cond_5
 
-    .line 844
     :try_start_1
     move-object/from16 v0, p2
 
@@ -3803,7 +3803,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v13, v12, v9}, Landroid/app/LoadedApk;->rewriteRValues(Ljava/lang/ClassLoader;Ljava/lang/String;I)V
+    invoke-direct {v0, v13, v12, v9}, Landroid/app/LoadedApk$FlymeInjector;->rewriteRValues(Landroid/app/LoadedApk;Ljava/lang/ClassLoader;Ljava/lang/String;I)V
 
     goto/16 :goto_2
 
@@ -4463,4 +4463,16 @@
     monitor-exit p0
 
     throw v1
+.end method
+
+.method flymeInvokeMethodRewriteRValues(Ljava/lang/ClassLoader;Ljava/lang/String;I)V
+    .locals 0
+    .param p1, "cl"    # Ljava/lang/ClassLoader;
+    .param p2, "packageName"    # Ljava/lang/String;
+    .param p3, "id"    # I
+
+    .prologue
+    invoke-direct {p0, p1, p2, p3}, Landroid/app/LoadedApk;->rewriteRValues(Ljava/lang/ClassLoader;Ljava/lang/String;I)V
+
+    return-void
 .end method

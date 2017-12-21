@@ -692,3 +692,6 @@ service leak_service /system/bin/sh /kmemleak.sh
     oneshot
     seclabel u:r:logserver:s0
 ## neiltsai end for kmemleak debug only
+service flymed /system/bin/flymed
+    class main
+    socket flymed stream 0660 root system
