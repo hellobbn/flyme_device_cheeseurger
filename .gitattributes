@@ -1,0 +1,4 @@
+vendor/system/priv-app/Settings/Settings.apk filter=lfs diff=lfs merge=lfs -text
+vendor/system/priv-app/Velvet/Velvet.apk filter=lfs diff=lfs merge=lfs -text
+vendor/system/app/Chrome/Chrome.apk filter=lfs diff=lfs merge=lfs -text
+vendor/system/app/WebViewGoogle/WebViewGoogle.apk filter=lfs diff=lfs merge=lfs -text
