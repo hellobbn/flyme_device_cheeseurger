@@ -2760,6 +2760,7 @@
     move-result v20
 
     .local v20, "result":I
+    move/from16 v0, v20
     move-object/from16 v10, p0
 
     move-object/from16 v11, p1

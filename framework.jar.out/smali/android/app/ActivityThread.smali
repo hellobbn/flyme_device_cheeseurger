@@ -10905,6 +10905,8 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    
+    :cond_flyme_0
     :cond_1
     sget-object v10, Landroid/app/ActivityThread;->sCurrentBroadcastIntent:Ljava/lang/ThreadLocal;
 
@@ -18280,32 +18282,31 @@
     throw v0
 .end method
 
-.method getTopLevelResources(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;ILandroid/app/LoadedApk;)Landroid/content/res/Resources;
-    .locals 11
-    .param p1, "packageName"    # Ljava/lang/String;
-    .param p2, "resDir"    # Ljava/lang/String;
-    .param p3, "splitResDirs"    # [Ljava/lang/String;
-    .param p4, "overlayDirs"    # [Ljava/lang/String;
-    .param p5, "libDirs"    # [Ljava/lang/String;
-    .param p6, "displayId"    # I
-    .param p7, "pkgInfo"    # Landroid/app/LoadedApk;
+.method getTopLevelResources(Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;ILandroid/app/LoadedApk;)Landroid/content/res/Resources;
+    .locals 10
+    .param p1, "resDir"    # Ljava/lang/String;
+    .param p2, "splitResDirs"    # [Ljava/lang/String;
+    .param p3, "overlayDirs"    # [Ljava/lang/String;
+    .param p4, "libDirs"    # [Ljava/lang/String;
+    .param p5, "displayId"    # I
+    .param p6, "pkgInfo"    # Landroid/app/LoadedApk;
 
     .prologue
     iget-object v0, p0, Landroid/app/ActivityThread;->mResourcesManager:Landroid/app/ResourcesManager;
 
-    invoke-virtual/range {p7 .. p7}, Landroid/app/LoadedApk;->getCompatibilityInfo()Landroid/content/res/CompatibilityInfo;
+    invoke-virtual/range {p6 .. p6}, Landroid/app/LoadedApk;->getCompatibilityInfo()Landroid/content/res/CompatibilityInfo;
+
+    move-result-object v8
+
+    invoke-virtual/range {p6 .. p6}, Landroid/app/LoadedApk;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v9
 
-    invoke-virtual/range {p7 .. p7}, Landroid/app/LoadedApk;->getClassLoader()Ljava/lang/ClassLoader;
+    const/4 v1, 0x0
 
-    move-result-object v10
+    const/4 v7, 0x0
 
-    const/4 v2, 0x0
-
-    const/4 v8, 0x0
-
-    move-object v1, p1
+    move-object v2, p1
 
     move-object v3, p2
 
@@ -18313,13 +18314,15 @@
 
     move-object v5, p4
 
-    move-object/from16 v6, p5
+    move v6, p5
 
-    move/from16 v7, p6
-
-    invoke-virtual/range {v0 .. v10}, Landroid/app/ResourcesManager;->getResources(Ljava/lang/String;Landroid/os/IBinder;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;ILandroid/content/res/Configuration;Landroid/content/res/CompatibilityInfo;Ljava/lang/ClassLoader;)Landroid/content/res/Resources;
+    invoke-virtual/range {v0 .. v9}, Landroid/app/ResourcesManager;->getResources(Landroid/os/IBinder;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;ILandroid/content/res/Configuration;Landroid/content/res/CompatibilityInfo;Ljava/lang/ClassLoader;)Landroid/content/res/Resources;
 
     move-result-object v0
+
+    move-object/from16 v1, p6
+
+    invoke-static {v1, v0}, Landroid/app/ActivityThread$FlymeInjector;->setFlymeThemeResource(Landroid/app/LoadedApk;Landroid/content/res/Resources;)V
 
     return-object v0
 .end method
