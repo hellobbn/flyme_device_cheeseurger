@@ -2,4 +2,4 @@
 
 ## Flag
 
-Flyme fullota 能过直播女装
+- no
