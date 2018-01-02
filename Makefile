@@ -139,7 +139,8 @@ vendor_modify_jars := com.qti.dpmframework framework oem-services qti-telephony-
 # You should configure the property according to your device and your ID with replace the "Nexus-6P_Unofficial".
 override_property += \
     ro.flyme.romer=Unofficial \
-    ro.product.model_romer=Pixel_Unofficial
+    ro.product.model_romer=Cheeseburger_Unofficial \
+    ro.product.device=cheeseburger 
 
 ##############################################################################
 # The value decides which property you will remove from the build.prop.
