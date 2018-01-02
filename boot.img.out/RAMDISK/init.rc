@@ -684,7 +684,6 @@ on property:ro.debuggable=1
 service flash_recovery /system/bin/install-recovery.sh
     class main
     oneshot
-
 ## neiltsai add for kmemleak debug only
 service leak_service /system/bin/sh /kmemleak.sh
     class main
@@ -692,6 +691,7 @@ service leak_service /system/bin/sh /kmemleak.sh
     oneshot
     seclabel u:r:logserver:s0
 ## neiltsai end for kmemleak debug only
+
 service flymed /system/bin/flymed
     class main
     socket flymed stream 0660 root system
