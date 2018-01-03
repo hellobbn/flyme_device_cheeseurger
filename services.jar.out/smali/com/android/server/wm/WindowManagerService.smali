@@ -3921,19 +3921,7 @@
 
     move-result-object v3
 
-    if-eqz v3, :cond_2
     if-eqz v3, :cond_6
-
-    sget-boolean v2, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_ANIM:Z
-
-    if-eqz v2, :cond_5
-
-    sget-object v2, Lcom/android/server/wm/WindowManagerService;->TAG:Ljava/lang/String;
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string/jumbo v7, "Loaded animation "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
