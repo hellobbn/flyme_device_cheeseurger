@@ -2312,7 +2312,7 @@
 
     .line 830
     :try_start_b
-    new-instance v89, Lcom/android/server/statusbar/StatusBarManagerService;
+    new-instance v89, Lcom/android/server/statusbar/FlymeExtStatusBarManagerService;
 
     move-object/from16 v0, v89
 
@@ -3644,7 +3644,9 @@
     invoke-virtual {v4, v5}, Lcom/android/server/SystemServiceManager;->startService(Ljava/lang/Class;)Lcom/android/server/SystemService;
 
     :cond_27
+    goto/16 :goto_flyme_0
     if-nez v43, :cond_28
+
 
     const-string v4, "StartAssetAtlasService"
 
