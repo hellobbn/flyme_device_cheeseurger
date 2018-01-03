@@ -2757,10 +2757,10 @@
 
     invoke-interface/range {v2 .. v12}, Landroid/app/IActivityManager;->startActivity(Landroid/app/IApplicationThread;Ljava/lang/String;Landroid/content/Intent;Ljava/lang/String;Landroid/os/IBinder;Ljava/lang/String;IILandroid/app/ProfilerInfo;Landroid/os/Bundle;)I
 
-    move-result v20
+    move-result v18
 
-    .local v20, "result":I
-    move/from16 v0, v20
+    .local v18, "result":I
+    move/from16 v0, v18
     move-object/from16 v10, p0
 
     move-object/from16 v11, p1
@@ -2777,9 +2777,9 @@
 
     move-object/from16 v17, p7
 
-    invoke-direct/range {v10 .. v20}, Landroid/app/Instrumentation;->startFlymeRecommendActivity(Landroid/content/Context;Landroid/os/IBinder;Landroid/os/IBinder;Landroid/app/Activity;Landroid/content/Intent;ILandroid/os/Bundle;I)V
+    invoke-direct/range {v10 .. v18}, Landroid/app/Instrumentation;->startFlymeRecommendActivity(Landroid/content/Context;Landroid/os/IBinder;Landroid/os/IBinder;Landroid/app/Activity;Landroid/content/Intent;ILandroid/os/Bundle;I)V
 
-    move/from16 v0, v20
+    move/from16 v0, v18
 
     move-object/from16 v1, p5
 

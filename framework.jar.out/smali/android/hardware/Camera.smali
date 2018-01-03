@@ -1408,7 +1408,6 @@
 
     return-object v0
 
-    :cond_flyme_0
 
     new-instance v0, Landroid/hardware/Camera;
 

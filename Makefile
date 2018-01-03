@@ -140,7 +140,10 @@ vendor_modify_jars := com.qti.dpmframework framework oem-services qti-telephony-
 override_property += \
     ro.flyme.romer=Unofficial \
     ro.product.model_romer=Cheeseburger_Unofficial \
-    ro.product.device=cheeseburger 
+    ro.product.device=cheeseburger \
+    persist.service.adb.enable=1 \
+    persist.service.debuggable=1 \
+    persist.sys.usb.config=mtp,adb 
 
 ##############################################################################
 # The value decides which property you will remove from the build.prop.
